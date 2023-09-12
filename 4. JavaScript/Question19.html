@@ -1,0 +1,38 @@
+<!-- Create basic math operation in JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function adi(){
+            var a = document.getElementById("firstNum").value;
+            var b = document.getElementById("lastNum").value;
+            var c = a+b;
+            document.getElementById("adition").innerHTML="Addition is :" +c;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Maths Oparation</h1>
+
+    <label for="">Enter 1st Number :</label>
+    <input type="number" value="" id="firstNum">
+    <br><br>
+    <label for="">Enter 2nd Number :</label>
+    <input type="number" value="" id="lastNum">
+    <br><br>
+
+    <button type="button" value="+" onclick="adi()">+</button>
+    <p id="adition"></p>
+    
+    <button type="button" value="-">-</button>
+    <button value="*">*</button>
+    <button value="/">/</button>
+    <button value="%">%</button>
+</body>
+</html>
