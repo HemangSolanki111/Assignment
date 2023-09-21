@@ -9,11 +9,41 @@
 
     <script>
         function adi(){
-            var a = document.getElementById("firstNum").value;
-            var b = document.getElementById("lastNum").value;
-            var c = a+b;
-            document.getElementById("adition").innerHTML="Addition is :" +c;
-        }
+            var a = parseInt(document.getElementById("firstNum").value);
+            var b = parseInt(document.getElementById("lastNum").value);
+            var c = a + b;
+            document.getElementById("ans").value = c;
+        };
+        
+        
+        function sub(){
+            var a = parseInt(document.getElementById("firstNum").value);
+            var b = parseInt(document.getElementById("lastNum").value);
+            var c = a - b;
+            document.getElementById("ans").value = c;
+        };
+        
+        function multi(){
+            var a = parseInt(document.getElementById("firstNum").value);
+            var b = parseInt(document.getElementById("lastNum").value);
+            var c = a * b;
+            document.getElementById("ans").value = c;
+        };
+        
+        function div(){
+            var a = parseInt(document.getElementById("firstNum").value);
+            var b = parseInt(document.getElementById("lastNum").value);
+            var c = a / b;
+            document.getElementById("ans").value = c;
+        };
+        
+        function pr(){
+            var a = parseInt(document.getElementById("firstNum").value);
+            var b = parseInt(document.getElementById("lastNum").value);
+            var c = a % b;
+            document.getElementById("ans").value = c;
+        };
+
     </script>
 
 </head>
@@ -28,11 +58,15 @@
     <br><br>
 
     <button type="button" value="+" onclick="adi()">+</button>
-    <p id="adition"></p>
     
-    <button type="button" value="-">-</button>
-    <button value="*">*</button>
-    <button value="/">/</button>
-    <button value="%">%</button>
+    <button type="button" value="-" onclick="sub()">-</button>
+
+    <button type="button" value="*" onclick="multi()">*</button>
+
+    <button type="button" value="/" onclick="div()">/</button>
+  
+    <button type="button" value="%" onclick="pr()">%</button>
+
+    <p>Answer : <input type="number" id="ans"></p>
 </body>
 </html>
